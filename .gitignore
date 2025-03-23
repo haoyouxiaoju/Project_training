@@ -1,0 +1,82 @@
+//.gitignore
+ 
+.DS_Store
+node_modules
+/dist
+ 
+# local env files
+.env.local
+.env.*.local
+ 
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+ 
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ignore these folders
+target/
+.idea/
+.settings/
+.vscode/
+bin/
+out/
+ 
+# ignore these files
+.classpath
+.project
+.settings
+.idea
+ 
+# filter databfile、sln file
+*.mdb
+*.ldb
+*.sln
+ 
+# class file
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+ 
+# compression file
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.via
+*.tmp
+*.err
+*.log
+*.iml
+ 
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.factorypath
+.mvn/
+mvnw.cmd
+mvnw
+ 
+# Files or folders need to be retained
+# ...
