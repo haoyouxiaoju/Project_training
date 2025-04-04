@@ -8,7 +8,7 @@
         </div>
       </div>
       <div style="width: fit-content; padding-right: 30px; display: flex; align-items: center;">
-        <img style="width: 40px; height: 40px; border-radius: 50%" :src="data.user.avatar || 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png'" alt="">
+        <img style="width: 40px; height: 40px; border-radius: 50%" :src="data.user.avatar " alt="">
         <span style="margin-left: 10px">{{ data.user.name }}</span>
       </div>
     </div>
@@ -21,10 +21,14 @@
             :default-active="router.currentRoute.value.path"
             :default-openeds="['1', '2']"
         >
-          <el-menu-item index="/buy" v-if="data.user.role === 'USER'">
+          <el-menu-item index="/buy" >  <!--v-if="data.user.role === 'USER'" -->
             <el-icon><Goods /></el-icon>
             <span>茶叶购买</span>
           </el-menu-item>
+          <!-- <el-menu-item index="/ShoppingCart">
+            <el-icon><Tickets /></el-icon>
+            <span>购物车</span>
+          </el-menu-item> -->
           <el-menu-item index="/orders">
             <el-icon><Tickets /></el-icon>
             <span>订单管理</span>
@@ -42,20 +46,20 @@
               <el-icon><Goods /></el-icon>
               <span>茶叶管理</span>
             </el-menu-item>
-            <el-menu-item index="/goodsStock">
+            <!-- <el-menu-item index="/goodsStock">
               <el-icon><SoldOut /></el-icon>
               <span>茶叶进货管理</span>
-            </el-menu-item>
+            </el-menu-item> -->
           </el-sub-menu>
           <el-sub-menu index="2" v-if="data.user.role === 'ADMIN'">
             <template #title>
               <el-icon><Memo /></el-icon>
               <span>用户管理</span>
             </template>
-            <el-menu-item index="/admin">
+            <!-- <el-menu-item index="/admin">
               <el-icon><User /></el-icon>
               <span>管理员信息</span>
-            </el-menu-item>
+            </el-menu-item> -->
             <el-menu-item index="/user">
               <el-icon><User /></el-icon>
               <span>普通用户信息</span>
