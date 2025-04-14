@@ -45,8 +45,26 @@ public class WebController {
      */
     @PostMapping("/register")
     public Result register(@RequestBody User user) {
+        // 用户名合法性验证
+        if (!isValidUsername(user.getUsername())) {
+            return Result.error("用户名不合法，只能包含字母、数字和下划线，长度4-16位");
+        }
         userService.register(user);
         return Result.success();
+    }
+    /**
+     * 验证用户名合法性
+     * @param username 用户名
+     * @return 是否合法
+     */
+    private boolean isValidUsername(String username) {
+        if (username == null || username.trim().isEmpty()) {
+            return false;
+        }
+
+        // 用户名规则：4-16位字母、数字或下划线
+        String regex = "^[a-zA-Z0-9_]{4,16}$";
+        return username.matches(regex);
     }
 
     /**

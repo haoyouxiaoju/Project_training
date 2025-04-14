@@ -44,7 +44,7 @@
             </el-menu-item>
             <el-menu-item index="/goods">
               <el-icon><Goods /></el-icon>
-              <span>茶叶管理</span>
+              <span>茶叶信息</span>
             </el-menu-item>
             <!-- <el-menu-item index="/goodsStock">
               <el-icon><SoldOut /></el-icon>
@@ -62,7 +62,7 @@
             </el-menu-item> -->
             <el-menu-item index="/user">
               <el-icon><User /></el-icon>
-              <span>普通用户信息</span>
+              <span>用户信息</span>
             </el-menu-item>
           </el-sub-menu>
           <el-menu-item index="/person">

@@ -1,11 +1,11 @@
 <template>
   <div>
 
-    <div class="card" style="margin-bottom: 5px;">
+    <!-- <div class="card" style="margin-bottom: 5px;">
       <el-input v-model="data.orderNo" style="width: 300px; margin-right: 10px" placeholder="请输入订单编号查询"></el-input>
       <el-button type="primary" @click="load">查询</el-button>
       <el-button type="info" style="margin: 0 10px" @click="reset">重置</el-button>
-    </div>
+    </div> -->
 
     <div class="card" style="margin-bottom: 5px">
       <el-table :data="data.tableData" stripe>

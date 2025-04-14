@@ -28,6 +28,10 @@ import router from "@/router";
 const data = reactive({
   user: JSON.parse(localStorage.getItem('system-user') || '{}'),
 })
+const localding = () => {
+  data.user.password = "";
+}
+localding();
 
 // 把当前修改的用户信息存储到后台数据库
 const save = () => {

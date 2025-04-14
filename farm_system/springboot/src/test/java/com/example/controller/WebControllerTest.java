@@ -49,6 +49,8 @@ public class WebControllerTest {
         account.setRole("ADMIN");
 
         Account mockAccount = new Account(); // 模拟登录成功返回的Account对象，可按需设置属性
+        mockAccount.setUsername("admin");
+        mockAccount.setPassword("admin");
 
         when(adminService.login(account)).thenReturn(mockAccount);
 
@@ -62,6 +64,8 @@ public class WebControllerTest {
 
         // 再测试用户登录情况
         account.setRole("USER");
+        mockAccount.setUsername("aaaa");
+        mockAccount.setPassword("123");
         when(userService.login(account)).thenReturn(mockAccount);
 
         result = webController.login(account);

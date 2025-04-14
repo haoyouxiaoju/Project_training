@@ -8,9 +8,9 @@
     </div>
 
     <div class="card" style="margin-bottom: 5px">
-      <div style="margin-bottom: 10px">
+      <!-- <div style="margin-bottom: 10px">
         <el-button type="primary" @click="handleAdd">新增</el-button>
-      </div>
+      </div> -->
       <el-table :data="data.tableData" stripe>
         <el-table-column label="用户名" prop="username"></el-table-column>
         <el-table-column label="名称" prop="name"></el-table-column>
