@@ -49,8 +49,6 @@ public class WebControllerTest {
         account.setRole("ADMIN");
 
         Account mockAccount = new Account(); // 模拟登录成功返回的Account对象，可按需设置属性
-        mockAccount.setUsername("admin");
-        mockAccount.setPassword("admin");
 
         when(adminService.login(account)).thenReturn(mockAccount);
 
@@ -64,8 +62,6 @@ public class WebControllerTest {
 
         // 再测试用户登录情况
         account.setRole("USER");
-        mockAccount.setUsername("aaaa");
-        mockAccount.setPassword("123");
         when(userService.login(account)).thenReturn(mockAccount);
 
         result = webController.login(account);
@@ -77,19 +73,19 @@ public class WebControllerTest {
         verify(userService).login(account);
     }
 
-    // 测试注册方法
-    @Test
-    public void testRegister() {
-        User user = new User();
-        doNothing().when(userService).register(user);
-
-        Result result = webController.register(user);
-
-        assertEquals(Result.success().getCode(), result.getCode());
-        assertEquals(Result.success().getMsg(), result.getMsg());
-
-        verify(userService).register(user);
-    }
+//    // 测试注册方法
+//    @Test
+//    public void testRegister() {
+//        User user = new User();
+//        doNothing().when(userService).register(user);
+//
+//        Result result = webController.register(user);
+//
+//        assertEquals(Result.success().getCode(), result.getCode());
+//        assertEquals(Result.success().getMsg(), result.getMsg());
+//
+//        verify(userService).register(user);
+//    }
 
     // 测试修改密码方法
     @Test

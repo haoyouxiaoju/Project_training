@@ -21,7 +21,7 @@
             :default-active="router.currentRoute.value.path"
             :default-openeds="['1', '2']"
         >
-          <el-menu-item index="/buy" >  <!--v-if="data.user.role === 'USER'" -->
+          <el-menu-item index="/buy" v-if="data.user.role === 'USER'">  <!-- -->
             <el-icon><Goods /></el-icon>
             <span>茶叶购买</span>
           </el-menu-item>

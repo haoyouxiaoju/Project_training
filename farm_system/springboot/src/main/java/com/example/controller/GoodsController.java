@@ -72,6 +72,7 @@ public class GoodsController {
                              @RequestParam(defaultValue = "2") Integer pageNum,
                              @RequestParam(defaultValue = "10") Integer pageSize) {
         PageInfo<Goods> page = goodsService.selectPage(goods, pageNum, pageSize);
+
         return Result.success(page);
     }
 
